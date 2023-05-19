@@ -12,7 +12,7 @@ const manifestForPlugin: Partial<VitePWAOptions> ={
     icons: [
       {
         src : "/vite.svg",
-        size : "192x192",
+        sizes : "192x192",
         type : "image/svg"
       }
     ],
@@ -30,7 +30,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA(manifestForPlugin),
-  ]
+  ],
 })
 
 
