@@ -12,8 +12,8 @@ const manifestForPlugin: Partial<VitePWAOptions> ={
     icons: [
       {
         src : "/vite.svg",
-        sizes : "192x192",
-        type : "image/svg"
+        sizes : "512x512",
+        type : "image/svg+xml"
       }
     ],
     theme_color : "#171717",
