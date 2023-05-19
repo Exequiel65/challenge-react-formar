@@ -9,6 +9,13 @@ const manifestForPlugin: Partial<VitePWAOptions> ={
     name : "Pokedex",
     short_name : "Pokedex",
     description : "Challenge de Pokedex con react vite",
+    icons: [
+      {
+        src : "/vite.svg",
+        size : "192x192",
+        type : "image/svg"
+      }
+    ],
     theme_color : "#171717",
     background_color : "#e8ebf2",
     display : "standalone",
@@ -19,6 +26,7 @@ const manifestForPlugin: Partial<VitePWAOptions> ={
 }
 // https://vitejs.dev/config/
 export default defineConfig({
+  base : "./",
   plugins: [
     react(),
     VitePWA(manifestForPlugin),
