@@ -1,4 +1,4 @@
-import { types } from "../types/typesReducer";
+// import { types } from "../types/typesReducer";
 
 // export const startLogin = (data)=>{
 //     let parse = {
