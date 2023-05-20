@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import LoadFirst from "../components/loadFirst/LoadFirst";
+import LoadFirst from "../../components/loadFirst/LoadFirst";
 import "./home.css"
-import List from "../components/Home/ListPokemons/List";
+import List from "../../components/Home/ListPokemons/List";
+import Nav from "../../components/Nav/Nav";
 // eslint-disable-next-line react-hooks/rules-of-hooks
 
 export default function Home() {
@@ -25,8 +26,11 @@ const currutine = ()=>{
   }
 
   return (
+    <>
+    <Nav/>
     <div className="home">
       <List />
     </div>
+    </>
   )
 }

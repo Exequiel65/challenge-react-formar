@@ -1,0 +1,29 @@
+.pokemon-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    z-index: 2;
+}
+.icon-arrow-left{
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+.name-contain p{
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+.number-contain p{
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}

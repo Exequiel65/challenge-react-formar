@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
 import "./cardPokemon.css"
+
 export default function CardPokemon() {
   return (
-    <div className="card-container">
+    <Link to="/pokemon/1" className="card-container">
         <div className="number-pokemon">
             <p>#11111</p>
         </div>
@@ -11,6 +13,6 @@ export default function CardPokemon() {
         <div className="data-contain-card">
             <p>Pokemon name</p>
         </div>
-    </div>
+    </Link>
   )
 }
