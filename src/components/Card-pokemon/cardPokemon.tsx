@@ -1,17 +1,27 @@
 import { Link } from "react-router-dom"
 import "./cardPokemon.css"
+import { IPokemon } from "../../Types/interface"
+import { POKEMON_TYPE_COLORS } from "../../CONSTANTS/colors"
+interface Props{
+  pokemon : IPokemon
+}
 
-export default function CardPokemon() {
+export default function CardPokemon(props: Props) {
+  const pokemon = props.pokemon
+  const getColorType = ()=>{
+    const type = pokemon?.types?.[0].type.name ? pokemon?.types?.[0].type.name : "normal"
+    return POKEMON_TYPE_COLORS[type]
+  }
   return (
-    <Link to="/pokemon/1" className="card-container">
+    <Link to={`/pokemon/${pokemon.id}`} className="card-container">
         <div className="number-pokemon">
-            <p>#11111</p>
+            <p>#{pokemon.order}</p>
         </div>
         <div className="image-contain-pokemon">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="" />
+            <img src={pokemon.image} alt="" />
         </div>
-        <div className="data-contain-card">
-            <p>Pokemon name</p>
+        <div className="data-contain-card" style={{backgroundColor : getColorType()}}>
+            <p>{pokemon.name}</p>
         </div>
     </Link>
   )
