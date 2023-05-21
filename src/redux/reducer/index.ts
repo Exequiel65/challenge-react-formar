@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import authReducer from './authReducer';
+import MyPokemonsReducer from './MyPokemonsRecucer';
 export const rootReducer = combineReducers({
-   auth : authReducer
+   pokedex : MyPokemonsReducer
 })

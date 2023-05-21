@@ -8,7 +8,9 @@ export default function Nav() {
         <div className="image-contain">
           <img src="images/pokebola.png" alt="logo" />
         </div>
-        <Link to="/" className="nav-title">Pokédex</Link>
+        <Link to="/" className="nav-title">Inicio</Link>
+        <Link to="/pokemon" className="nav-title">Ver Pokemons</Link>
+        <Link to="/mis-pokemons" className="nav-title">Mis Pokemons</Link>
       </div>
 
       

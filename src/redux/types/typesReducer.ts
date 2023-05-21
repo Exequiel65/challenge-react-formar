@@ -1,7 +1,7 @@
 export const types = {
-    authLogin : '[auth] Login',
-    authRegister : '[auth] Register',
-    authLogout : '[auth] Logout',
+    addPokemon : 'ADD_POKEMON',
+    deletePokemon : 'DELETE_POKEMON',
+    pokemons : 'POKEMON',
 }
 
 
