@@ -31,6 +31,9 @@ export const PokemonDetail = () => {
               <StatsList pokemon={Pokemon}  color={color}/>
 
             </div >
+            <div className="button-contain">
+              <button>Agregar a mi Pokedex</button>
+            </div>
           </>
 
         )

@@ -1,0 +1,8 @@
+.list-main{
+    background-color: #DC0A2D ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}

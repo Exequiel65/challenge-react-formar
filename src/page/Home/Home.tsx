@@ -2,14 +2,12 @@
 import { useState, useEffect } from 'react';
 import LoadFirst from "../../components/loadFirst/LoadFirst";
 import "./home.css"
-import List from "../../components/Home/ListPokemons/List";
 import Nav from "../../components/Nav/Nav";
-import useGetPokemons from "../../hooks/useGetPokemons";
+import { Link } from 'react-router-dom';
 // eslint-disable-next-line react-hooks/rules-of-hooks
 
 export default function Home() {
   const [load, setfLoad] = useState<boolean>(true)
-  const { ListPokemon } = useGetPokemons();
   
   useEffect(() => {
     setTimeout(() => {
@@ -26,7 +24,16 @@ export default function Home() {
     <>
     <Nav/>
     <div className="home">
-      <List listPokemon={ListPokemon} />
+      <section>
+        <h2>Mi Pokedex</h2>
+        <div className='body-contain'>
+          <h5>Elije un Opcion:</h5>
+          <div className='links-contain'>
+            <Link className='link-nav' to="/" >Ir a mi Pokedex</Link>
+            <Link className='link-nav'  to="/pokemon" >Ver Pokemons</Link>
+          </div>
+        </div>
+      </section>
     </div>
     </>
   )
