@@ -19,11 +19,15 @@
     color: #FFFFFF;
     display: flex;
     align-items: center;
+    text-transform: capitalize;
 }
 .number-contain p{
     font-weight: 700;
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     color: #FFFFFF;
+}
+.return-page{
+    cursor: pointer;
 }

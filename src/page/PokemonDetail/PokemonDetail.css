@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 .description-container{
     width: 90%;
@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .description-container h4{

@@ -4,23 +4,37 @@ import StatsList from "../../components/Stats/StatsList"
 import PokemonHeader from "../../components/pokemonDetaiHeader/PokemonHeader"
 import "./PokemonDetail.css"
 import PokeballBackground from "../../assets/Pokeball.svg"
+import { useParams } from "react-router-dom"
+import useGetPokemonDetail from "../../hooks/useGetPokemonDetail"
+import { getColorType } from "../../utils/getColorType"
+import Loader from "../../components/Load/Loader"
+
 export const PokemonDetail = () => {
+  const params = useParams();
+  const { Pokemon } = useGetPokemonDetail(params.id)
+  const color:string = getColorType(Pokemon, 0)
   return (
-    <div className="pokemon-detail-container">
+    <div className="pokemon-detail-container" style={{backgroundColor: color}}>
       <img className="pokeball-background" src={PokeballBackground} alt="" />
-      <PokemonHeader />
-      <ImagePokemon />
-      <div className="description-container">
-        <h4>About</h4>
-        
-        <Block1 />
-        <div className="description-pokemon">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum labore, expedita deleniti magnam quibusdam maiores unde similique iste aspernatur provident obcaecati. Quasi nesciunt nulla eveniet, at tempora illo porro.</p>
-        </div>
+      {
+        !Pokemon && <Loader relative={true} /> 
+      }
+      {
+        Pokemon && (
+          <>
+            <PokemonHeader pokemon={Pokemon} />
+            <ImagePokemon pokemon={Pokemon} />
+            <div className="description-container" >
+              <h4 style={{color: color}} >About</h4>
+              
+              <Block1 pokemon={Pokemon}/>
+              <StatsList pokemon={Pokemon}  color={color}/>
 
-       <StatsList />
+            </div >
+          </>
 
-      </div >
+        )
+      }
     </div>
   )
 }

@@ -51,3 +51,7 @@
     text-align: center;
     color: #666666;
 }
+
+.skill p {
+    text-transform: capitalize;
+}

@@ -5,7 +5,7 @@ import { reqResApi } from "../api/reqResPokeApi";
 import axios from 'axios';
 import { IPokemon, Pokemon } from "../Types/interface";
 
-export default function GetPokemons() {
+export default function useGetPokemons() {
   const [ListPokemon, setListPokemon] = useState<IPokemon[]>();
   const [NextUrl, setNextUrl] = useState<string | null >(null)
 
