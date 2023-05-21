@@ -29,7 +29,7 @@ export default function Home() {
         <div className='body-contain'>
           <h5>Elije un Opcion:</h5>
           <div className='links-contain'>
-            <Link className='link-nav' to="/" >Ir a mi Pokedex</Link>
+            <Link className='link-nav' to="/mis-pokemons" >Ir a mi Pokedex</Link>
             <Link className='link-nav'  to="/pokemon" >Ver Pokemons</Link>
           </div>
         </div>

@@ -62,7 +62,12 @@ export default function useGetPokemons() {
     }
   
   }
+
+  const loadMore = async ()=>{
+    await loadPokemons();
+  }
   return {
-    ListPokemon
+    ListPokemon,
+    loadMore
   }
 }

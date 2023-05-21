@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 import "./nav.css"
 export default function Nav() {
   return (
@@ -7,7 +8,7 @@ export default function Nav() {
         <div className="image-contain">
           <img src="images/pokebola.png" alt="logo" />
         </div>
-        <p className="nav-title">Pokédex</p>
+        <Link to="/" className="nav-title">Pokédex</Link>
       </div>
 
       
