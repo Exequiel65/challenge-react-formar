@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from '../page/Home';
-import Nav from '../components/Nav/Nav';
+import Home from '../page/Home/Home';
+import { PokemonDetail } from '../page/PokemonDetail/PokemonDetail';
 
 const router = createBrowserRouter([
     {
@@ -8,15 +8,14 @@ const router = createBrowserRouter([
       element: <Home />
     },
     {
-      path: "/test",
-      element : <div>Hola</div>
+      path: "/pokemon/:id",
+      element : <PokemonDetail />
     }
   ]);
   
 export const AppRouter = () => {
   return (
     <>
-      <Nav />
       <RouterProvider router={router} />
     </>
   )

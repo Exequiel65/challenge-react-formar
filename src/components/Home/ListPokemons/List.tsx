@@ -1,17 +1,30 @@
 import "./List.css"
 import CardPokemon from "../../Card-pokemon/cardPokemon";
+import { IPokemon } from '../../../Types/interface';
+import Loader from "../../Load/Loader";
 
-export default function List() {
+interface Props{
+  listPokemon : IPokemon[] | undefined
+}
+
+export default function List(props: Props) {
+  const listPokemon = props.listPokemon
+
+  if (listPokemon === undefined) {
+    return (
+      <Loader relative={false} />
+    )
+  }
   return (
     <section className="list-container">
         <div className="contain">
-            <CardPokemon />
-            <CardPokemon />
-            <CardPokemon />
-            <CardPokemon />
-            <CardPokemon />
-            <CardPokemon />
-            <CardPokemon />
+          {
+            listPokemon?.map((p, i)=> {
+              return (<CardPokemon key={i} pokemon={p} />)
+            }
+            )
+          }
+            
         </div>
     </section>
   )
