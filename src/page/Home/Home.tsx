@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 import LoadFirst from "../../components/loadFirst/LoadFirst";
 import "./home.css"
 import List from "../../components/Home/ListPokemons/List";
@@ -11,9 +11,15 @@ export default function Home() {
   const [load, setfLoad] = useState<boolean>(true)
   const { ListPokemon } = useGetPokemons();
   
+  useEffect(() => {
+    setTimeout(() => {
+      setfLoad(false)
+    }, 2000);
+  }, [])
+  
 
 
-  if (!load) {
+  if (load) {
     return <LoadFirst />
   }
   return (
