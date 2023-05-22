@@ -4,16 +4,16 @@ import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa';
 
 const manifestForPlugin: Partial<VitePWAOptions> ={
   registerType : "prompt",
-  includeAssets: ["vite.svg"],
+  includeAssets: ["/images/pokebola2.png"],
   manifest : {
     name : "Pokedex",
     short_name : "Pokedex",
     description : "Challenge de Pokedex con react vite",
     icons: [
       {
-        src : "/vite.svg",
-        sizes : "512x512",
-        type : "image/svg+xml"
+        src : "/images/pokebola2.png",
+        sizes : "192x192",
+        type : "image/png"
       }
     ],
     theme_color : "#171717",
