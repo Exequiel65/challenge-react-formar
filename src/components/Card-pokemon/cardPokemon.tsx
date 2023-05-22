@@ -11,7 +11,7 @@ export default function CardPokemon(props: Props) {
   const pokemon = props.pokemon
   
   return (
-    <Link to={`/pokemon/${pokemon.id}`} className="card-container">
+    <Link to={`/pokemon/${pokemon.id}`} className="card-container animate__animated animate__fadeInUp">
         <div className="number-pokemon">
             <p>#{pokemon.order}</p>
         </div>

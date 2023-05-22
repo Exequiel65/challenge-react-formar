@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+import { Link } from "react-router-dom"
 import "./nav.css"
-import { faMagnifyingGlass, faArrowDownWideShort } from "@fortawesome/free-solid-svg-icons"
 export default function Nav() {
   return (
     <div className="nav-container">
@@ -8,18 +8,12 @@ export default function Nav() {
         <div className="image-contain">
           <img src="images/pokebola.png" alt="logo" />
         </div>
-        <p className="nav-title">Pokédex</p>
+        <Link to="/" className="nav-title">Inicio</Link>
+        <Link to="/pokemon" className="nav-title">Ver Pokemons</Link>
+        <Link to="/mis-pokemons" className="nav-title">Mis Pokemons</Link>
       </div>
 
-      <div className="search-contain">
-        <div className="search">
-          <FontAwesomeIcon className="icon-search" icon={faMagnifyingGlass}  />
-          <input type="search" name="search" id="search" placeholder="Buscar" />
-        </div>
-        <div className="icon-sort-contain">
-          <FontAwesomeIcon className="icon-sort" icon={faArrowDownWideShort} />
-        </div>
-      </div>
+      
     </div>
   )
 }

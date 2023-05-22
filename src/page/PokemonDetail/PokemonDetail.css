@@ -1,10 +1,10 @@
 .pokemon-detail-container{
     width: 100%;
+    min-height: 100vh;
     background: #B8B8B8;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     /* padding-bottom: 20px; */
 }
@@ -21,6 +21,7 @@
     align-items: center;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .description-container h4{
@@ -49,4 +50,21 @@
     right: 5%;
     z-index: 1;
     opacity: 0.3;
+}
+
+.button-contain{
+    margin-bottom: 20px;
+}
+.button-contain button{
+    padding: 10px 15px;
+    background-color: rgb(233, 2, 48);
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 1px 3px 1px #7c0000;
+}
+
+.button-contain button:active{
+    background-color: #fd4545;
 }

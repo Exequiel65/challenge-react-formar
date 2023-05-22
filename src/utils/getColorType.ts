@@ -5,3 +5,4 @@ export const getColorType = (pokemon: IPokemon | Pokemon | undefined, indece: nu
     const type = pokemon?.types?.[0].type.name ? pokemon?.types?.[indece].type.name : "normal"
     return POKEMON_TYPE_COLORS[type]
 }
+

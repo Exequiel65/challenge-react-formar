@@ -10,6 +10,7 @@
 
 .image-pokemon{
     width: 70%;
+    max-width: 600px;
 }
 
 .image-pokemon img{
