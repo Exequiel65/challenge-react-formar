@@ -2,13 +2,11 @@
 import { useState, useEffect } from 'react';
 import LoadFirst from "../../components/loadFirst/LoadFirst";
 import "./home.css"
-import Nav from "../../components/Nav/Nav";
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line react-hooks/rules-of-hooks
 
 export default function Home() {
   const [load, setfLoad] = useState<boolean>(true)
-  
   useEffect(() => {
     setTimeout(() => {
       setfLoad(false)
@@ -22,7 +20,6 @@ export default function Home() {
   }
   return (
     <>
-    <Nav/>
     <div className="home">
       <section>
         <h2>Mi Pokedex</h2>

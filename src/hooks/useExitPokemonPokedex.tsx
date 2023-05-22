@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { IInitialState } from "../Types/PokemonLes"
-import { IPokemon, Pokemon } from "../Types/interface"
+import { IPokemon} from "../Types/interface"
 
 export default function useExitPokemonPokedex(id: string | undefined) {
     const [ExistPokedex, setExistPokedex] = useState(false)

@@ -4,9 +4,10 @@
     box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding: 24px 12px 10px;
     margin-bottom: 10px;
@@ -23,6 +24,27 @@
     gap: 8px;
 }
 
+.scroller{
+    width: 80%;
+    max-width: 600px;
+}
+
+.scroller-item{
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.scroller > div > div{
+    max-width: 500px;
+}
+
+
 @media (min-width: 720px) {
     .list-container{
         max-width: 600px;
@@ -33,3 +55,5 @@
         max-width: 1200px;
     }
 }
+
+

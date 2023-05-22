@@ -2,12 +2,20 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import useGetPokemons from '../../../hooks/useGetPokemons';
 import CardPokemon from '../../Card-pokemon/cardPokemon';
 import "./List.css"
+import FilterType from '../FilterType/FilterType';
+import { useEffect } from 'react';
 // Componente de scroll infinito
 const InfiniteScrollComponent= () => {
-  const { ListPokemon, loadMore } = useGetPokemons();
+  const { ListPokemon, loadMore, TypeSelected, setType} = useGetPokemons();
+  useEffect(() => {
+    ListPokemon
+  }, [ListPokemon])
+ 
 
   return (
     <section className="list-container">
+      <FilterType setType={setType} type={TypeSelected} />
+      
         {/* <div className="contain"> */}
       <InfiniteScroll
         dataLength={ListPokemon?.length || 0}

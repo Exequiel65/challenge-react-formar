@@ -4,6 +4,7 @@ import Nav from "../../components/Nav/Nav";
 
 import "./ListPokemon.css"
 export default function ListPokemons() {
+
   return (
     <>
         <Nav />

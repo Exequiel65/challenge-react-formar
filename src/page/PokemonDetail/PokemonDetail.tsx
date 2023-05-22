@@ -13,7 +13,6 @@ import { useDispatch } from "react-redux"
 import { addPokemon, deletePokemon } from "../../redux/actions/PokemonAction"
 import Swal from "sweetalert2"
 import useExitPokemonPokedex from '../../hooks/useExitPokemonPokedex';
-import { useEffect } from 'react';
 
 
 export const PokemonDetail = () => {

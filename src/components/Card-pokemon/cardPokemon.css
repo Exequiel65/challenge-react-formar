@@ -6,7 +6,7 @@
     border-radius: 8px;
     position: relative;
     text-decoration: none;
-    
+    min-width: 145px;
 }
 .number-pokemon{
     font-weight: 400;
